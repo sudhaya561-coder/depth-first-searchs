@@ -55,6 +55,7 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 </ol></B>
 <h1>Code</h1>
 ```
+
      from collections import defaultdict
      
      # Function to perform DFS
@@ -91,43 +92,11 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
      dfs(graph, start, visited)
      
      print(visited)
+  OUTPUT:
+  <img width="480" height="197" alt="image" src="https://github.com/user-attachments/assets/282d566d-0178-4031-9628-b87b5a6134ad" />
 
 
-<hr>
-<h3>Sample Input</h3>
-<hr>
-8 9 <BR>
-A B <BR>
-A C <BR>
-B E <BR>
-C D <BR>
-B D <BR>
-C G <BR>
-D F <BR>
-G F <BR>
-F H <BR>
-<hr>
-<h3>Sample Output</h3>
-<hr>
-['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
 
-<hr>
-
-<hr>
-<h3>Sample Input</h3>
-<hr>
-5 5 <BR>
-0 1 <BR>
-0 2 <BR>
-0 3 <BR>
-2 3 <BR>
-2 4 <BR>
-<hr>
-<h3>Sample Output</h3>
-<hr>
-['0', '1', '2', '3', '4']
-
-<hr>
 <h3>Result:</h3>
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
