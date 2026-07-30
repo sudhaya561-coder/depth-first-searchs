@@ -1,6 +1,6 @@
 <h1>ExpNo 2 : Implement Depth First Search Traversal of a Graph</h1> 
-<h3>Name: </h3>
-<h3>Register Number:     </h3>
+<h3>Name: UDHAYA .S </h3>
+<h3>Register Number:  21222530287</h3>
 <H3>Aim:</H3>
 <p> To Implement Depth First Search Traversal of a Graph using Python 3.</p>
 <h3>Theory:</h3>
@@ -53,6 +53,45 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
  <li>Find its Successors Or neighbors and Check whether the node is visited or not</li>
  <li>If Not Visited, add it to the STACK. Else Call The Function Again Until No more nodes needs to be visited.</li>
 </ol></B>
+<h1>Code</h1>
+```
+     from collections import defaultdict
+     
+     # Function to perform DFS
+     def dfs(graph, start, visited):
+         visited.append(start)
+     
+         for neighbor in graph[start]:
+             if neighbor not in visited:
+                 dfs(graph, neighbor, visited)
+     
+     
+     # Read number of vertices and edges
+     v, e = map(int, input().split())
+     
+     # Create graph
+     graph = defaultdict(list)
+     
+     # Read edges
+     for _ in range(e):
+         u, v = input().split()
+         graph[u].append(v)
+         graph[v].append(u)   # Remove this line for directed graph
+     
+     # Sort adjacency list for consistent traversal
+     for node in graph:
+         graph[node].sort()
+     
+     # Read starting node
+     start = input("Enter the starting node: ")
+     
+     visited = []
+     
+     # Perform DFS
+     dfs(graph, start, visited)
+     
+     print(visited)
+
 
 <hr>
 <h3>Sample Input</h3>
